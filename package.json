@@ -5,7 +5,8 @@
   "description": "Extension for Mendix Studio Pro",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --noEmit && vite build --config vite.config.ts"
+    "build": "tsc --noEmit && vite build --config vite.config.ts && npm run copy-soa-files",
+    "copy-soa-files": "mkdir -p dist/teamcenterapi/SOA && cp -f SOA/index.html dist/teamcenterapi/SOA/ && cp -f SOA/api.js dist/teamcenterapi/SOA/ && cp -f SOA/angular.min.js dist/teamcenterapi/SOA/ && cp -f SOA/structure.js dist/teamcenterapi/SOA/"
   },
   "dependencies": {
     "@mendix/extensions-api": "^0.1.1-mendix.10.21.0",

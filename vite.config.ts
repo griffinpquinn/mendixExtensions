@@ -12,6 +12,6 @@ export default defineConfig({
         rollupOptions: {
             external: ["@mendix/component-framework", "@mendix/model-access-sdk"]
         },
-        outDir: "./dist/myextension"
+        outDir: "./dist/teamcenterapi"
     }
 } satisfies UserConfig);

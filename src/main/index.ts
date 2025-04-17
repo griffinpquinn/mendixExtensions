@@ -4,10 +4,10 @@ class Main implements IComponent {
     async loaded() {
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
-            menuId: "myextension.MainMenu",
-            caption: "MyExtension Menu",
+            menuId: "teamcenterapi.MainMenu",
+            caption: "Teamcenter API Browser",
             subMenus: [
-                { menuId: "myextension.ShowTabMenuItem", caption: "Show tab" },
+                { menuId: "teamcenterapi.ShowApiBrowser", caption: "SOA API Browser" },
             ],
         });
 
@@ -15,13 +15,13 @@ class Main implements IComponent {
         studioPro.ui.extensionsMenu.addEventListener(
             "menuItemActivated",
             (args) => {
-                if (args.menuId === "myextension.ShowTabMenuItem") {
+                if (args.menuId === "teamcenterapi.ShowApiBrowser") {
                     studioPro.ui.tabs.open(
                         {
-                            title: "My Extension Tab",
+                            title: "Teamcenter SOA API Browser",
                         },
                         {
-                            componentName: "extension/myextension",
+                            componentName: "extension/teamcenterapi",
                             uiEntrypoint: "tab",
                         }
                     );
